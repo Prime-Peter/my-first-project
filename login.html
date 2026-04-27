@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Prime InnoTech Hub</title>
+
+<style>
+  :root{
+    --bg:#0b1220;
+    --card:#111c33;
+    --primary:#38bdf8;
+    --text:#e5e7eb;
+    --muted:#94a3b8;
+  }
+
+  body{
+    margin:0;
+    font-family:Arial;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+  }
+
+  .container{
+    background:var(--card);
+    padding:40px;
+    border-radius:12px;
+    width:320px;
+    border:1px solid #1f2a44;
+    box-shadow:0 0 20px rgba(56,189,248,0.1);
+  }
+
+  h2{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:20px;
+  }
+
+  input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #1f2a44;
+    background:#0f1a30;
+    color:white;
+  }
+
+  button{
+    width:100%;
+    padding:12px;
+    background:var(--primary);
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+  }
+
+  button:hover{
+    opacity:0.9;
+  }
+
+  .note{
+    font-size:12px;
+    text-align:center;
+    margin-top:15px;
+    color:var(--muted);
+  }
+
+  a{
+    color:var(--primary);
+    text-decoration:none;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <div class="note">
+    Demo UI only — backend coming next 🔐
+  </div>
+</div>
+
+<script>
+function login(){
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if(user && pass){
+    alert("Login successful (demo mode)");
+    window.location.href = "index.html";
+  } else {
+    alert("Please fill all fields");
+  }
+}
+</script>
+
+</body>
+</html>
