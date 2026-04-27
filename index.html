@@ -3,74 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prime InnoTech Hub</title>
+  <title>Prime InnoTech Hub | SaaS Solutions</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: #0b1220;
       color: white;
     }
 
+    /* NAV */
     header {
-      padding: 20px;
-      text-align: center;
-      background: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #111c33;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    .tagline {
+    .logo {
+      font-weight: bold;
       color: #38bdf8;
-      margin-top: 8px;
     }
 
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
-    .hero h2 {
-      font-size: 40px;
+    .hero h1 {
+      font-size: 44px;
     }
 
     .hero p {
-      color: #cbd5e1;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
+      color: #cbd5e1;
+      line-height: 1.6;
     }
 
     .btn {
-      display: inline-block;
       margin-top: 20px;
-      padding: 12px 20px;
+      padding: 12px 24px;
       background: #38bdf8;
-      color: black;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    .services {
+    /* SECTIONS */
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #38bdf8;
+      margin-bottom: 30px;
+    }
+
+    /* FEATURES */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
-      padding: 40px;
     }
 
     .card {
-      background: #1e293b;
+      background: #111c33;
       padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* PRICING */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .price-card {
+      background: #111c33;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #1f2a44;
+    }
+
+    .price {
+      font-size: 28px;
+      color: #38bdf8;
+      margin: 10px 0;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: #111c33;
       border-radius: 10px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #1e293b;
       color: #94a3b8;
     }
   </style>
@@ -79,39 +131,82 @@
 <body>
 
 <header>
-  <h1>Prime InnoTech Hub</h1>
-  <div class="tagline">Building Smart Digital Systems for Businesses</div>
+  <div class="logo">Prime InnoTech Hub</div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#cta">Get Started</a>
+  </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>We Build Modern Tech Solutions</h2>
+  <h1>Build Smart Business Systems</h1>
   <p>
-    We help businesses go digital with management systems, websites, and automation tools that improve efficiency and growth.
+    We create scalable SaaS solutions, management systems, and automation tools
+    for businesses like SACCOs, schools, and startups.
   </p>
-  <a href="#services" class="btn">Explore Services</a>
+  <button class="btn">Start Free Trial</button>
 </section>
 
-<section id="services" class="services">
+<!-- FEATURES -->
+<section id="features">
+  <h2>Features</h2>
+  <div class="grid">
 
-  <div class="card">
-    <h3>Web Development</h3>
-    <p>Modern responsive websites for businesses and startups.</p>
+    <div class="card">
+      <h3>User Management</h3>
+      <p>Secure login and role-based access for users and admins.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Management</h3>
+      <p>Store and manage business records efficiently.</p>
+    </div>
+
+    <div class="card">
+      <h3>Automation</h3>
+      <p>Automate reports, applications, and workflows.</p>
+    </div>
+
   </div>
+</section>
 
-  <div class="card">
-    <h3>Management Systems</h3>
-    <p>SACCOs, schools, and businesses digital automation systems.</p>
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing Plans</h2>
+  <div class="pricing">
+
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">Free</div>
+      <p>Basic system demo</p>
+    </div>
+
+    <div class="price-card">
+      <h3>Business</h3>
+      <div class="price">$10/mo</div>
+      <p>Full management system</p>
+    </div>
+
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <div class="price">$25/mo</div>
+      <p>Custom SaaS solution</p>
+    </div>
+
   </div>
+</section>
 
-  <div class="card">
-    <h3>Software Solutions</h3>
-    <p>Custom desktop and web applications for clients.</p>
-  </div>
-
+<!-- CTA -->
+<section id="cta" class="cta">
+  <h2>Ready to digitize your business?</h2>
+  <p>Let’s build your system and move your operations online.</p>
+  <button class="btn">Contact Us</button>
 </section>
 
 <footer>
-  © 2026 Prime InnoTech Hub | Built with GitHub Pages
+  © 2026 Prime InnoTech Hub | SaaS Solutions
 </footer>
 
 </body>
